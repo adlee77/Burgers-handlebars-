@@ -33,7 +33,7 @@ const orm = {
         let queryString = "UPDATE " + table + " SET devoured=true WHERE name="
         queryString += type.toString()
 
-        connection.query(queryString, (err, result) {
+        connection.query(queryString, (err, result)=>{
             if (err) {throw err}
             cb(result)
         })
