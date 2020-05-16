@@ -1,0 +1,18 @@
+.container, .outerContainer {
+    background-color: #FFD06E;
+}
+h1 {
+    position: relative;
+    top: 30px;
+    color: #F23B02;
+    padding-bottom: 30px;
+}
+body {
+    background-color: #FFD06E;
+}
+img {
+    background: transparent;
+}
+li {
+    list-style:none;
+}
