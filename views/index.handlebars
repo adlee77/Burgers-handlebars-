@@ -1,49 +1,64 @@
-
 <div class="outerContainer">
-<div class="text-center"><h1>Burgers!</h1></div>
-<br>
-<div class="container">
-<div class="row">
-  <div class="col text-center">
-  <img src="/assets/img/kisspng-hamburger-cheeseburger-veggie-burger-cartoon-clip-burgers-cliparts-5a7659573ec1a1.0909067415177055592571.png" height="150" width="200" alt="burger">
-</div>
-</div>
-<br>
-<div class="row">
-  <div class="col text-center"><h2>Make a Burger</h2></div>
+  <div class="text-center">
+    <h1>Eat-Da-Burger!</h1>
   </div>
-<div class="row">
-  <div class="col text-center">
-<form class="create-form">
-  <div class="form-group">
-    <input type="text" id="burger" name="name">
-  </div>
-    <button type="submit">Add Burger</button>
-</form>
-</div>
-</div>
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <img
+          src="/assets/img/kisspng-hamburger-cheeseburger-veggie-burger-cartoon-clip-burgers-cliparts-5a7659573ec1a1.0909067415177055592571.png"
+          height="150" width="200" alt="burger">
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col text-center">
+        <h2>Make a Burger</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center">
+        <form class="create-form">
+          <div class="form-group">
+            <input type="text" id="burger" name="name">
+          </div>
+          <button id="create" type="submit">Add Burger</button>
+        </form>
+      </div>
+    </div>
 
-<div class="row">
-<div class="col-6 text-center">
-<h3>Uneaten</h3>
-<ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    <li>{{name}}<button class="eat" data-id="{{id}}">Eat it</button></li>
-    {{/unless}}
-    {{/each}}
-</ul>
-</div>
-<div class="col-6 text-center">
-<h3>Eaten</h3>
-<ul>
- {{#each burgers}}
- {{#if devoured}}
- <li>{{name}}<button class="remove" data-id="{{id}}">Remove</button></li>
- {{/if}}
- {{/each}}
-</ul>
-</div>
-</div>
-</div>
+    <div class="row status">
+      <div class="col-6 text-center">
+        <h3>Uneaten</h3>
+        <ul>
+          {{#each burgers}}
+          {{#unless devoured}}
+          <div class="row">
+            <div class="col-6 text-center">
+              <li>{{name}}</li>
+            </div>
+            <li><button class="eat" data-id="{{id}}">Eat it!</button></li>
+          </div>
+          {{/unless}}
+          {{/each}}
+        </ul>
+      </div>
+      <div class="col-6 text-center">
+        <h3>Eaten</h3>
+        <ul>
+          {{#each burgers}}
+          {{#if devoured}}
+          <div class="row">
+            <div class="col-6 text-center">
+              <li>{{name}}</li>
+            </div>
+            <li><button class="remove" data-id="{{id}}">Remove</button></li>
+          </div>
+          {{/if}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>

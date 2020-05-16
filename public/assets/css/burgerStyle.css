@@ -7,12 +7,38 @@ h1 {
     color: #F23B02;
     padding-bottom: 30px;
 }
-body {
+#body {
     background-color: #FFD06E;
 }
 img {
     background: transparent;
 }
 li {
-    list-style:none;
+    position: relative;
+    list-style: none;
+    left: 110px;
+}
+.eat, .remove {
+    background-color: #3B73AC;
+    color: white;
+    border-radius: 8px;
+    position: relative;
+    right: 50px;
+}
+#create {
+    background-color: #3B73AC;
+    color: white;
+    border-radius: 8px;
+    font-size: 150%;
+}
+input {
+    height: 50px;
+    width: 250px;
+}
+h3{
+    text-decoration: underline;
+}
+.status {
+    position: relative;
+    top: 15px;
 }
