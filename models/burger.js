@@ -11,8 +11,13 @@ const burger = {
             cb(res)
         })
     },
-    updateOne: function(type, cb) {
-        orm.updateOne("burgers", type, (res)=>{
+    updateOne: function(id, cb) {
+        orm.updateOne("burgers", id, (res)=>{
+            cb(res)
+        })
+    },
+    deleteOne: function(id, cb) {
+        orm.deleteOne("burgers", id, (res)=>{
             cb(res)
         })
     }

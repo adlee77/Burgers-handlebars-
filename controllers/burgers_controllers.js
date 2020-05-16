@@ -7,21 +7,34 @@ router.get("/", (req,res)=>{
         let hbsData= {
             burgers: data
         }
-        console.log(obj)
+        console.log(hbsData)
         res.render("index", hbsData)
     })
 })
 
-router.post((req, res)=>{
+router.post("/api/burgers", (req, res)=>{
+    console.log(req.body.name)
     burger.insertOne([
         req.body.name
     ], (result)=>{
-        res.render("index", result)
+        res.json(result)
     })
 })
 
-router.put((req,res)=>{
-    burger.updateOne([
-    
-    ])
+router.put("/api/burgers/:id", (req,res)=>{
+    burger.updateOne(
+    req.params.id, (result)=>{
+        res.json(result)
+    }
+    )
 })
+
+router.delete("/api/burgers/:id", (req, res)=>{
+    burger.deleteOne(
+        req.params.id, (result)=>{
+            res.json(result)
+        }
+    )
+})
+
+module.exports = router;
