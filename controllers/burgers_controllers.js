@@ -7,7 +7,6 @@ router.get("/", (req,res)=>{
         let hbsData= {
             burgers: data
         }
-        console.log(hbsData)
         res.render("index", hbsData)
     })
 })
