@@ -15,6 +15,7 @@ $(".create-form").on("submit", function (event) {
     })
 })
 
+
 $(".eat").on("click", function (event) {
     let id = $(this).attr("data-id")
     console.log(id)
