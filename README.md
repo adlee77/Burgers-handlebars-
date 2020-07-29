@@ -1,4 +1,4 @@
-# Link to App [Burgers App](https://burger-handlebars-yo.herokuapp.com/)
+# Link to App [Eat-Da-Burger! App](https://burger-handlebars-yo.herokuapp.com/)
 
 # A Burger App!
 
