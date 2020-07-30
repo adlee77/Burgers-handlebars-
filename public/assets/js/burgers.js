@@ -17,7 +17,6 @@ $(".create-form").on("submit", function (event) {
 
 $(".eat").on("click", function (event) {
     let id = $(this).attr("data-id")
-    Flash.success("Yum")
     $.ajax({
         url: "/api/burgers/" + id,
         type: "PUT"
