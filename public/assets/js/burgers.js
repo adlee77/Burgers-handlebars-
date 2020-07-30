@@ -1,5 +1,4 @@
 $(".create-form").on("submit", function (event) {
-    // Make sure to preventDefault on a submit event.
     event.preventDefault();
 
     let newBurger = {
@@ -18,7 +17,7 @@ $(".create-form").on("submit", function (event) {
 
 $(".eat").on("click", function (event) {
     let id = $(this).attr("data-id")
-    console.log(id)
+    Flash.success("Yum")
     $.ajax({
         url: "/api/burgers/" + id,
         type: "PUT"
@@ -29,7 +28,6 @@ $(".eat").on("click", function (event) {
 
 $(".remove").on("click", function (event) {
     let id = $(this).attr("data-id")
-    console.log(id)
     $.ajax({
         url: "/api/burgers/" + id,
         type: "DELETE"
